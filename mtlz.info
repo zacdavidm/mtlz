@@ -2,7 +2,8 @@ name = MTLZ - Materialize
 description = Drupal Implementation of Materialize
 screenshot = images/screenshot.png
 
-stylesheets[all][] = stylesheets/mtlz-styles.css
+stylesheets[all][] = assets/stylesheets/materialize/materialize.css
+stylesheets[all][] = assets/stylesheets/mtlz/mtlz.css
 
 ; Regions are output in the page.tpl.php
 regions[help]                = Help
