@@ -1,5 +1,5 @@
-name = Material Design Lite
-description = Drupal Implementation of Material Design Lite
+name = MTLZ - Materialize
+description = Drupal Implementation of Materialize
 screenshot = images/screenshot.png
 
 stylesheets[all][] = stylesheets/mtlz-styles.css
