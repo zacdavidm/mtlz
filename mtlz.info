@@ -5,6 +5,9 @@ screenshot = images/screenshot.png
 stylesheets[all][] = assets/stylesheets/materialize/materialize.css
 stylesheets[all][] = assets/stylesheets/mtlz/mtlz.css
 
+scripts[] = assets/js/materialize/bin/materialize.min.js
+scripts[] = assets/js/mtlz/mtlz.js
+
 ; Regions are output in the page.tpl.php
 regions[help]                = Help
 regions[content]             = Content

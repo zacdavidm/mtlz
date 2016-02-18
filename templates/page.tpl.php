@@ -1,87 +1,49 @@
 <nav class="green" role="navigation">
   <div class="nav-wrapper container clearfix">
-
-    <ul class="right hide-on-med-and-down">
-      <li><a href="#">Secondary Nav</a></li>
-    </ul>
-
+    <?php print $top_bar_secondary_menu; ?>
   </div>
   <div class="nav-wrapper container" style="height:64px;">
 
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 
-    <a id="logo-container" href="#" class="brand-logo">Logo</a>
+    <?php if ($site_name): ?>
+      <a href="<?php print $front_page; ?>" id="logo-container" class="brand-logo" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
+    <?php endif; ?>
+
+    <?php print $sidebar_combined_menu; ?>
 
     <ul id="nav-mobile" class="side-nav">
       <li><a href="#">Navbar Link</a></li>
     </ul>
 
   </div>
-  <div class="green darken-1 clearfix">
-    <div class="nav-wrapper container">
-
-      <ul class="left hide-on-med-and-down">
-        <li><a href="#">Main Nav</a></li>
-      </ul>
-
+  <div class="green darken-1">
+    <div class="nav-wrapper container clearfix">
+      <?php print $top_bar_main_menu; ?>
     </div>
   </div>
 </nav>
-<div class="section no-pad-bot" id="index-banner">
-  <div class="container">
-    <br><br>
-    <h1 class="header center orange-text">Starter Template</h1>
-    <div class="row center">
-      <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-    </div>
-    <div class="row center">
-      <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-    </div>
-    <br><br>
 
-  </div>
-</div>
-
-
-<div class="container">
+<?php if ($title): ?>
   <div class="section">
-
-    <!--   Icon Section   -->
-    <div class="row">
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-          <h5 class="center">Speeds up development</h5>
-
-          <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-        </div>
-      </div>
-
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-          <h5 class="center">User Experience Focused</h5>
-
-          <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-        </div>
-      </div>
-
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-          <h5 class="center">Easy to work with</h5>
-
-          <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-        </div>
-      </div>
+    <div class="container">
+      <?php print render($title_prefix); ?>
+      <h1 id="page-title" class="header orange-text title"><?php print $title; ?></h1>
+      <?php print render($title_suffix); ?>
     </div>
-
   </div>
-  <br><br>
+<?php endif; ?>
 
+<?php if ($messages): ?>
   <div class="section">
-
+    <div class="container">
+      <?php print $messages; ?>
+    </div>
   </div>
+<?php endif; ?>
+
+<div class="section content">
+  <?php print render($page['content']); ?>
 </div>
 
 <footer class="page-footer orange">
